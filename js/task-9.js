@@ -109,3 +109,8 @@ const users =  [
 //   Используй только перебирающие методы массива которые не изменяют (не мутируют) исходный массив. Т.е. нельзя 
 //   использовать for, splice, push и т.п. мутирующие методы.
 
+const getNamesSortedByFriendsCount = (users) => [...users]
+.sort((a, b)=> a.friends.length - b.friends.length)
+.map(({name}) => name);
+
+console.log(getNamesSortedByFriendsCount(users));
